@@ -3,6 +3,6 @@ twig:
      exception_controller: 'twig.controller.exception::showAction'
     error_handler: null
 
-when@test:
+when @test:
     twig:
         strict_variables: true
