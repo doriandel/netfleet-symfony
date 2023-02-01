@@ -14,8 +14,7 @@ class Film
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column]
-    private ?int $Id = null;
+    
 
     #[ORM\Column(length: 255)]
     private ?string $Name = null;
