@@ -34,9 +34,9 @@ class HomeController extends AbstractController
             $entityManager = $doctrine ->getManager();
             $entityManager->persist($film);
             $entityManager->flush();
-            return new Response('', Response::HTTP_CREATED);
+            return new Response('Le film a été ajouté avec succès.', Response::HTTP_CREATED);
         }
-        else return new Response('', Response::HTTP_BAD_REQUEST);
+        else return new Response('Une erreur est survenue lors de l\'ajout du film.', Response::HTTP_BAD_REQUEST);
     }
 
     #[Route('/getall', name: 'app_getall')]
