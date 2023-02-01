@@ -28,9 +28,7 @@
         </div>
         <div>
         <h2>Liste des films</h2>
-        {{ form_start(getall, {'action': path('app_getall')}, {'method': 'GET'}) }}
-            <button type="submit">See all movies</button>
-            {{ form_end(getall) }}
+            <a href="http://127.0.0.1:8000/getall"><button type="button">See all movies</button></a>
         </div>
         {% endblock %}
     </body>
