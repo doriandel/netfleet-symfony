@@ -16,6 +16,22 @@
     <body>
         {% block body %}
         <h1>Home</h1>
+        <div>
+            <h2>Ajouter un film</h2>
+            {{ form_start(form, {'action': path('app_create')}, {'method': 'POST'}) }}
+            {{ form_row(form.Name) }}
+            {{ form_row(form.Synopsis) }}
+            {{ form_row(form.Type) }}
+            {{ form_row(form.CreationDate) }}
+            <button type="submit">Create</button>
+            {{ form_end(form) }}
+        </div>
+        <div>
+        <h2>Liste des films</h2>
+        {{ form_start(getall, {'action': path('app_getall')}, {'method': 'GET'}) }}
+            <button type="submit">See all movies</button>
+            {{ form_end(getall) }}
+        </div>
         {% endblock %}
     </body>
 </html>
